@@ -1,8 +1,17 @@
+comments = @post.comments.map do |comment| 
+{
+  id: comment.id,
+  body: comment.body,
+  user: comment.user,
+  likes: comment.likes
+}
+end
+
 {
   id: @post.id,
   title: @post.title,
   body: @post.body,
   user: @post.user,
   likes: @post.likes,
-  comments: @post.comments
+  comments: comments
 }
