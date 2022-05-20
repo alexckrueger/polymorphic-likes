@@ -1,0 +1,8 @@
+@localhost = http://localhost:3000
+
+### Posts Index
+GET {{localhost}}/posts
+
+
+### Posts Show
+GET {{localhost}}/posts/1
