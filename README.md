@@ -1,24 +1,23 @@
-# README
+# Polymorphic association
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The key to dry code! A polymorphic association consists of a model that can be related to multiple other models. Instead of having separate tables for post_likes and comment_likes, we have the ability to combine them into one likes table and connect it to both posts and comments.
 
-Things you may want to cover:
+My previous projects have all included single associations. This is my first practice using this type of association.
 
-* Ruby version
+## About this project
 
-* System dependencies
+We are keeping this simple. We have users, users have many posts, users and posts have many comments, and posts and comments have many likes.
 
-* Configuration
+![Schema](https://i.imgur.com/Do5vVJt.png)
 
-* Database creation
+Our key is likes - likes need to be created by 1 user and made for either a post or a comment. This is the polymorphic association, a like may belong to a post OR a comment.
 
-* Database initialization
+In my posts show, I rendered all the information about the post, the user who created the post, the likes on the post, the comments on the post, as well as the likes on the comments. I doubt all of this would need to be rendered in a real world setting, but this is just a proof a concept. With this, I'd be able to expand to just include a customm ethod of "like_count" to my posts or comments if I wanted to.
 
-* How to run the test suite
+![Posts Show](https://i.imgur.com/guADXMw.png?1)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Resources used
 
-* Deployment instructions
+[Creating Polymorphic relationships in Ruby on Rails](https://www.culttt.com/2016/01/13/creating-polymorphic-relationships-in-ruby-on-rails) by Philip Brown
 
-* ...
+[Rails Techniques: Using Polymorphic Associations](https://semaphoreci.com/blog/2017/08/16/polymorphic-associations-in-rails.html) by Jovan Ivanovic
