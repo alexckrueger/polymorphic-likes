@@ -1,0 +1,8 @@
+{
+  id: @post.id,
+  title: @post.title,
+  body: @post.body,
+  user: @post.user,
+  likes: @post.likes,
+  comments: @post.comments
+}

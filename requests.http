@@ -1,8 +1,8 @@
 @localhost = http://localhost:3000
 
 ### Posts Index
-GET {{localhost}}/posts
+GET {{localhost}}/posts.json
 
 
 ### Posts Show
-GET {{localhost}}/posts/1
+GET {{localhost}}/posts/2.json
